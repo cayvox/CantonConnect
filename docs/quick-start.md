@@ -24,7 +24,7 @@ import { createCantonConnect } from '@cantonconnect/sdk';
 
 // Create client - ALL wallet adapters are automatically included!
 const client = createCantonConnect({
-  registryUrl: 'https://registry.cantonconnect.io',
+  registryUrl: 'https://registry.cantonconnect.xyz',
   network: 'devnet',
   app: { name: 'My dApp' },
 });
@@ -47,7 +47,7 @@ console.log('Connected:', session.partyId);
 import { createCantonConnect } from '@cantonconnect/sdk';
 
 const client = createCantonConnect({
-  registryUrl: 'https://registry.cantonconnect.io',
+  registryUrl: 'https://registry.cantonconnect.xyz',
   network: 'devnet',
   app: { name: 'My dApp' },
 });
@@ -93,7 +93,7 @@ import { createCantonConnect } from '@cantonconnect/sdk';
 
 // Create client - no adapter imports needed!
 const client = createCantonConnect({
-  registryUrl: 'https://registry.cantonconnect.io',
+  registryUrl: 'https://registry.cantonconnect.xyz',
   network: 'devnet',
   app: { name: 'My dApp' },
 });

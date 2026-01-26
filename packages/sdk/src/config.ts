@@ -14,7 +14,7 @@ import type {
  * Default registry URL for CantonConnect
  * This points to the official registry endpoint.
  */
-export const DEFAULT_REGISTRY_URL = 'https://registry.cantonconnect.io/v1/wallets.json';
+export const DEFAULT_REGISTRY_URL = 'https://registry.cantonconnect.xyz/v1/wallets.json';
 
 /**
  * Adapter class type (for instantiation)
@@ -27,7 +27,7 @@ export type AdapterClass = new () => WalletAdapter;
 export interface CantonConnectConfig {
   /** 
    * Registry URL (optional)
-   * @default 'https://registry.cantonconnect.io/v1/wallets.json'
+   * @default 'https://registry.cantonconnect.xyz/v1/wallets.json'
    */
   registryUrl?: string;
   /** Registry channel */

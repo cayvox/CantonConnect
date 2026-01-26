@@ -215,4 +215,4 @@ If a bad registry is published:
 ## Support
 
 - Registry CLI: `cantonconnect-registry --help`
-- Security: security@cantonconnect.io
+- Security: security@cantonconnect.xyz

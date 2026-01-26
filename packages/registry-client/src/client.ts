@@ -62,7 +62,7 @@ export interface RegistryClientOptions {
 /**
  * Default registry URL
  */
-const DEFAULT_REGISTRY_URL = 'https://registry.cantonconnect.io';
+const DEFAULT_REGISTRY_URL = 'https://registry.cantonconnect.xyz';
 
 /**
  * Registry client

@@ -138,7 +138,7 @@ import { createCantonConnect } from '@cantonconnect/sdk';
 import { MyWalletAdapter } from '@mywallet/adapter';
 
 const client = createCantonConnect({
-  registryUrl: 'https://registry.cantonconnect.io',
+  registryUrl: 'https://registry.cantonconnect.xyz',
   network: 'devnet',
   app: { name: 'My dApp' },
 });
@@ -198,4 +198,4 @@ See existing adapters for reference:
 
 - Documentation: `docs/wallet-provider-guide.md`
 - Issues: GitHub Issues
-- Security: security@cantonconnect.io
+- Security: security@cantonconnect.xyz

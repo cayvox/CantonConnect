@@ -138,7 +138,7 @@ const client = createCantonConnect({
   },
 
   // Optional
-  registryUrl: 'https://registry.cantonconnect.io/v1/wallets.json', // Default
+  registryUrl: 'https://registry.cantonconnect.xyz/v1/wallets.json', // Default
   channel: 'stable', // 'stable' | 'beta'
   
   // Advanced: Custom adapters

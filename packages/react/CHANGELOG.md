@@ -1,5 +1,12 @@
 # @cantonconnect/react
 
+## 0.2.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @cantonconnect/sdk@0.2.3
+
 ## 0.2.2
 
 ### Patch Changes

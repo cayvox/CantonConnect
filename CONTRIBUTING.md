@@ -393,7 +393,7 @@ describe('createSession', () => {
  * @example
  * ```typescript
  * const client = createCantonConnect({
- *   registryUrl: 'https://registry.cantonconnect.io',
+ *   registryUrl: 'https://registry.cantonconnect.xyz',
  *   network: 'devnet',
  *   app: { name: 'My dApp' },
  * });

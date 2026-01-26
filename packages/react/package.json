@@ -1,6 +1,6 @@
 {
   "name": "@cantonconnect/react",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "React hooks and components for CantonConnect",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

@@ -184,7 +184,7 @@ import { ConsoleAdapter } from '@cantonconnect/adapter-console';
 import { LoopAdapter } from '@cantonconnect/adapter-loop';
 
 export const client = createCantonConnect({
-  registryUrl: 'https://registry.cantonconnect.io',
+  registryUrl: 'https://registry.cantonconnect.xyz',
   channel: 'stable',
   network: 'devnet',
   // Register the wallet adapters you want to support

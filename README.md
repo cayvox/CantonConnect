@@ -155,7 +155,7 @@ import { createCantonConnect } from '@cantonconnect/sdk';
 
 // Initialize
 const client = createCantonConnect({
-  registryUrl: 'https://registry.cantonconnect.io',
+  registryUrl: 'https://registry.cantonconnect.xyz',
   network: 'devnet',
   app: { name: 'My dApp' },
 });
@@ -208,7 +208,7 @@ import {
 // Provider setup
 function App() {
   const client = useMemo(() => createCantonConnect({
-    registryUrl: 'https://registry.cantonconnect.io',
+    registryUrl: 'https://registry.cantonconnect.xyz',
     network: 'devnet',
     app: { name: 'My dApp' },
   }), []);
@@ -431,7 +431,7 @@ const client = createCantonConnect(config: CantonConnectConfig);
 |--------|------|----------|---------|-------------|
 | `network` | `'devnet' \| 'testnet' \| 'mainnet'` | Yes | - | Target network |
 | `app.name` | `string` | Yes | - | Your application name |
-| `registryUrl` | `string` | No | `https://registry.cantonconnect.io/v1/wallets.json` | URL of the wallet registry |
+| `registryUrl` | `string` | No | `https://registry.cantonconnect.xyz/v1/wallets.json` | URL of the wallet registry |
 | `app.origin` | `string` | No | `window.location.origin` | Application origin |
 | `channel` | `'stable' \| 'beta'` | No | `'stable'` | Registry channel |
 | `storage` | `StorageAdapter` | No | `localStorage` | Custom storage adapter |
@@ -665,6 +665,6 @@ MIT License - see [LICENSE](./LICENSE) for details.
 
 **Built with ❤️ for the Canton Network ecosystem**
 
-[Website](https://cantonconnect.io) | [Documentation](./docs/) | [GitHub](https://github.com/cayvox/CantonConnect)
+[Website](https://cantonconnect.xyz) | [Documentation](./docs/) | [GitHub](https://github.com/cayvox/CantonConnect)
 
 </div>

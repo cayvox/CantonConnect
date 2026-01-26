@@ -229,6 +229,6 @@ const { verifier, challenge } = await generatePKCE();
 
 ## Reporting Security Issues
 
-Report security vulnerabilities to: security@cantonconnect.io
+Report security vulnerabilities to: security@cantonconnect.xyz
 
 Do not disclose vulnerabilities publicly until patched.

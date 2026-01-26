@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.15.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Type check
+        run: pnpm typecheck
+
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test
+
+      - name: Verify Registry Signatures
+        run: |
+          # Verify stable registry
+          if [ -f registry/v1/stable/registry.sig ] && [ -f registry/keys/dev.pub ]; then
+            pnpm registry:verify --channel stable --pubkey registry/keys/dev.pub || exit 1
+          fi
+          
+          # Verify beta registry
+          if [ -f registry/v1/beta/registry.sig ] && [ -f registry/keys/dev.pub ]; then
+            pnpm registry:verify --channel beta --pubkey registry/keys/dev.pub || exit 1
+          fi
+
+      - name: Install Playwright Browsers
+        run: |
+          cd apps/demo
+          pnpm exec playwright install --with-deps chromium
+
+      - name: Run Full Verification Pipeline
+        run: |
+          pnpm verify:e2e
+        env:
+          CI: true
+          
+      - name: Upload Verification Artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: verification-artifacts
+          path: |
+            artifacts/verify/**/*
+            apps/demo/playwright-report/**
+            apps/demo/test-results/**
+          if-no-files-found: ignore
+          retention-days: 30

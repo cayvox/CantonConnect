@@ -1,5 +1,11 @@
 # @cantonconnect/sdk
 
+## 0.2.3
+
+### Patch Changes
+
+- Update registry URL to cantonconnect.xyz domain
+
 ## 0.2.2
 
 ### Patch Changes

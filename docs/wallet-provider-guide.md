@@ -229,4 +229,4 @@ See `docs/registry-onboarding.md` for:
 
 - Documentation: `docs/`
 - Issues: GitHub Issues
-- Security: security@cantonconnect.io
+- Security: security@cantonconnect.xyz
